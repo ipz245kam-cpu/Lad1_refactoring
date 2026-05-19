@@ -32,8 +32,8 @@ namespace Sudoky
                 using (var db = new DB())
                 {
                     db.Open();
-
-                    string sql = $"SELECT id, password FROM users WHERE userName = '{username.Replace("'", "''")}'";
+            
+                   string sql = "SELECT id, password FROM users WHERE userName = ?";
                     using (var reader = db.ExecuteReader(sql))
                     {
                         if (!reader.Read())
