@@ -17,6 +17,7 @@ namespace Sudoky
         private Label labelComplication;
         private Label labelTimer;
         private Timer gameTimer;
+        private enum Difficulty { Dev = 1, Easy = 20, Medium = 40, Hard = 75 }
         private int complication = 1;
         private string complicationString = "Dev";
         private TimeSpan elapsedTime;
